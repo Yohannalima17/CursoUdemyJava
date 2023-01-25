@@ -1,0 +1,30 @@
+Array:
+ -> É uma estrutura estática (tamanho fixo)
+ -> É homogêneo (precisa ser definido um tipo)
+ -> Estrutura indexada
+ -> É um objeto
+
+
+ EQUALS -> Define igualdade entre 2 objetos
+        -> Retorna True or False
+
+ HASHCODE -> Faz uma comparação inteligente antes de chamar o EQUALS
+
+
+ COLLECTIONS (add, size(), clear(), remove, contains(), ...)
+ SET -> Não ordenado (por padrão)
+     -> Não indexado
+     -> Não aceita repetição
+
+ LIST -> Indexada
+      -> Aceita repetição
+
+ MAPS -> Chave/valor
+      -> Chave não aceita repetição
+      -> Valor aceita repetição
+
+ QUEUE -> Implementa fila
+       -> First in / First out (fifo)
+
+ Stack -> Implementa pilha (stack)
+       -> Last in / First out (LiFo)

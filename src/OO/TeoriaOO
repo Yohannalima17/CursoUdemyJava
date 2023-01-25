@@ -1,0 +1,18 @@
+ENCAPSULAMENTO -> Visibilidade dos métodos e atributos.
+
+               Modificadores de acesso:
+               -> Public: Qualquer classe consegue acessar
+               -> Protected: Acessível em classes do mesmo pacote e transmitido por herança para outro pacote
+               -> Package (default): Acessível em classes do mesmo pacote
+               -> Private: Só pode ser acessado dentro da própria classe
+
+
+HERANÇA -> Métodos que são gerais para alguns "grupos"
+
+
+POLIMORFISMO -> Estático: Métodos com mesmo nome e parâmetros diferentes
+             -> Dinâmico: Herança
+
+
+ABSTRAÇÃO -> Simplificação
+          -> Trazer cenários da vida real para o código
