@@ -5,7 +5,6 @@ ENCAPSULAMENTO -> Visibilidade dos métodos e atributos.
                -> Protected: Acessível em classes do mesmo pacote e transmitido por herança para outro pacote
                -> Package (default): Acessível em classes do mesmo pacote
                -> Private: Só pode ser acessado dentro da própria classe
-Teste git
 
 HERANÇA -> Métodos que são gerais para alguns "grupos"
 
