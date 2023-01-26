@@ -16,3 +16,11 @@ POLIMORFISMO -> Estático: Métodos com mesmo nome e parâmetros diferentes
 
 ABSTRAÇÃO -> Simplificação
           -> Trazer cenários da vida real para o código
+
+
+INTERFACE -> Tem métodos sem corpo que são obrigatórios para as classes que herdam
+          -> Determina apenas a necessidade da herança
+          -> Uma classe pode herdar de várias interfaces
+
+
+CLASSE ABSTRATA -> Métodos incompletos ou sem implementação
