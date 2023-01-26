@@ -1,6 +1,7 @@
 package OO.banco;
 
 import java.time.LocalDate;
+import java.util.Random;
 
 public abstract class Conta {
 
@@ -10,10 +11,19 @@ public abstract class Conta {
     private double limiteSaqueDiario = 1000;
     private int tipoConta; // 1- Corrente | 2- Poupança
     private LocalDate dataCriacao;
+    Cliente cliente;
 
-    public Conta(int idConta, int idPessoa) {
-        this.idConta = idConta;
-        this.idPessoa = idPessoa;
+
+    public Conta(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public int idadeCliente(){
+        return cliente.getIdade();
+    }
+
+    public Long cpfCliente(){
+        return cliente.getCpf();
     }
 
 
@@ -21,8 +31,10 @@ public abstract class Conta {
         return idConta;
     }
 
-    public void setIdConta(int idConta) {
-        this.idConta = idConta;
+    void gerarIdConta() {
+        Random rand = new Random(5);
+        this.idConta = rand.nextInt(99999);
+
     }
 
     public int getIdPessoa() {
@@ -30,7 +42,8 @@ public abstract class Conta {
     }
 
     public void setIdPessoa(int idPessoa) {
-        this.idPessoa = idPessoa;
+        Random rand = new Random(4);
+        this.idPessoa = rand.nextInt(9999);
     }
 
     public double getSaldo() {
@@ -49,8 +62,14 @@ public abstract class Conta {
         this.limiteSaqueDiario = limiteSaqueDiario;
     }
 
-    public int getTipoConta() {
-        return tipoConta;
+    public String getTipoConta() {
+        String tipoDaConta = "";
+        if (tipoConta == 1){
+            tipoDaConta = "Conta Corrente";
+        } else if (tipoConta == 2) {
+            tipoDaConta = "Conta Poupança";
+        }
+        return tipoDaConta;
     }
 
     public void setTipoConta(int tipoConta) {
