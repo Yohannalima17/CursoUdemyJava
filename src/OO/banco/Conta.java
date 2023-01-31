@@ -11,27 +11,13 @@ public abstract class Conta {
     private double limiteSaqueDiario = 1000;
     private int tipoConta; // 1- Corrente | 2- Poupança
     private LocalDate dataCriacao;
-    Cliente cliente;
-
-
-    public Conta(Cliente cliente) {
-        this.cliente = cliente;
-    }
-
-    public int idadeCliente(){
-        return cliente.getIdade();
-    }
-
-    public Long cpfCliente(){
-        return cliente.getCpf();
-    }
 
 
     public int getIdConta() {
         return idConta;
     }
 
-    void gerarIdConta() {
+    public void setIdConta() {
         Random rand = new Random(5);
         this.idConta = rand.nextInt(99999);
 
@@ -41,7 +27,7 @@ public abstract class Conta {
         return idPessoa;
     }
 
-    public void setIdPessoa(int idPessoa) {
+    public void setIdPessoa() {
         Random rand = new Random(4);
         this.idPessoa = rand.nextInt(9999);
     }

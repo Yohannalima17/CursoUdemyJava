@@ -6,7 +6,6 @@ ENCAPSULAMENTO -> Visibilidade dos métodos e atributos.
                -> Package (default): Acessível em classes do mesmo pacote
                -> Private: Só pode ser acessado dentro da própria classe
 
-
 HERANÇA -> Métodos que são gerais para alguns "grupos"
 
 

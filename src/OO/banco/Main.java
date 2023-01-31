@@ -1,5 +1,6 @@
 package OO.banco;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -24,7 +25,7 @@ public class Main {
             String nome = dadosCliente.nextLine();
 
             System.out.print("Informe sua idade: ");
-            int idade = dadosCliente.nextInt();
+            Integer idade = dadosCliente.nextInt();
 
             System.out.print("Informe seu cpf: ");
             Long cpf = dadosCliente.nextLong();
@@ -32,13 +33,15 @@ public class Main {
             switch (entradaConta) {
                 case 1: {
                     Cliente cliente = new Cliente(nome, idade, cpf);
-                    ContaCorrente cc = new ContaCorrente(cliente);
-                    cc.dadosCC(cliente, cc);
+                    ContaCorrente cc = new ContaCorrente();
+                    cc.dadosCC(cliente);
+                    break;
                 }
                 case 2: {
                     Cliente cliente = new Cliente(nome, idade, cpf);
-                    ContaPoupanca cp = new ContaPoupanca(cliente);
-                    cp.dadosCP(cliente, cp);
+                    ContaPoupanca cp = new ContaPoupanca();
+                    cp.dadosCP(cliente);
+                    break;
                 }
             }
             dadosCliente.close();

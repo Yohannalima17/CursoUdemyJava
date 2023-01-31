@@ -1,23 +1,29 @@
 package OO.banco;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ContaPoupanca extends Conta{
     double RENDIMENTO_PORCENTAGEM = 0.05;
     double rendimento = getSaldo() * RENDIMENTO_PORCENTAGEM;
 
-    public ContaPoupanca(Cliente cliente) {
-        super(cliente);
+    public ContaPoupanca(){
+        setIdPessoa();
+        setIdConta();
+        setTipoConta(2);
     }
-
     @Override
     public void setSaldo(double saldo) {
         super.setSaldo(saldo + rendimento);
     }
 
-    void dadosCP(Cliente cliente, ContaPoupanca cp){
+    void dadosCP(Cliente cliente){
         System.out.println("Conta criada.");
-        System.out.printf("----- DADOS DA CONTA -----\n" +
-                        "Nome: %d\nId do cliente: %d\nIdade: %d\nCPF: %d\nId da conta: %d\n" +
-                        "Tipo de conta: %d\n", cp.cliente.getNome(), cp.getIdPessoa(),
-                cp.cliente.getIdade(), cp.cliente.getCpf(), cp.getIdConta(), cp.getTipoConta());
+        System.out.println("------- DADOS DA CONTA -------");
+        System.out.println("Nome: " + cliente.getNome());
+        System.out.println("Id do cliente: " + getIdPessoa());
+        System.out.println("Idade: " + cliente.getIdade());
+        System.out.println("CPF: " + cliente.getCpf());
+        System.out.println("Id da conta: " + getIdConta());
+        System.out.println("Tipo de conta: " + getTipoConta());
     }
 }
