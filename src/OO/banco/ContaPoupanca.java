@@ -1,7 +1,5 @@
 package OO.banco;
 
-import org.jetbrains.annotations.NotNull;
-
 public class ContaPoupanca extends Conta{
     double RENDIMENTO_PORCENTAGEM = 0.05;
     double rendimento = getSaldo() * RENDIMENTO_PORCENTAGEM;
